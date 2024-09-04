@@ -52,6 +52,14 @@ def pending_task(request,task_id):
         task.save()
         return redirect(request.META.get('HTTP_REFERER', 'todolist'))   
     
+def index(request):
+    context = {
+        "index_text": "Welcome to Index Page",
+        
+    }
+    return render(request, 'index.html', context)
+
+
 # Create your views here.
 def contact(request):
     context = {
