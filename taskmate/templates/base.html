@@ -38,6 +38,21 @@
             </ul>
           </div>
         </div>
+        {% if user.is_authenticated %}
+        <div class="d-flex">
+          <div class="p-2 text-white">{{ user.username }}</div>
+          <a href="{% url 'logout' %}">
+          <button class="btn btn-success ml-5" type="submit">Logout</button>
+          </a>
+        </div>
+        {% else %}
+        <a href="{% url 'login' %}">
+          <button class="btn btn-success me-2" type="submit">Login</button>
+          </a>
+          <a href="{% url 'register' %}">
+            <button class="btn btn-success" type="submit">Register</button>
+            </a>
+        {% endif %}
       </nav>
 
   </head>

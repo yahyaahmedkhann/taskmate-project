@@ -23,6 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-wnvd)-fzq@wh!%re&e%km1+w(nf&e5r@jcm2abv+ghf76ohn#7'
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -40,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'todolist_app',
     'users_app',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +126,13 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'taskmate', 'static'))]
 
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = "todolist"
+LOGIN_URL = 'login'
