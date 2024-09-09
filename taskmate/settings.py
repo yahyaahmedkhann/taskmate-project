@@ -34,7 +34,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 DEBUG = env('DJANGO_DEBUG')
 
 ALLOWED_HOSTS = ["localhost",  "127.0.0.1", "my-taskmate.up.railway.app"]
-CSRF_TRUSTED_ORIGINS = ["   my-taskmate.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = ["https://my-taskmate.up.railway.app"]
 
 
 # Application definition
