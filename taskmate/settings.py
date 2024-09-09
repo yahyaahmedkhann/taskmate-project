@@ -33,7 +33,8 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DJANGO_DEBUG')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["localhost",  "127.0.0.1", "my-taskmate.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = ["   my-taskmate.up.railway.app"]
 
 
 # Application definition
